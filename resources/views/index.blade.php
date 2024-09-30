@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-    <title>Laravel</title>
+@section('title', 'Jollibee')
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-    @vite('resources/css/app.css')
-    <script>
-        function toggleDropdown(dropdownId) {
-            document.getElementById(dropdownId).classList.toggle("hidden");
-        }
-    </script>
-</head>
-<body class="bg-gray-100">
+@section('content')
     <!-- Header Section -->
     <header class="bg-red-600 shadow">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -67,7 +52,7 @@
 
     <!-- Main content -->
     <main class="container mx-auto px-4 py-6">
-        <h2 class="text-3xl font-semibold">Welcome to our website!</h2>
+        <h2 class="text-3xl font-semibold">Welcome {{ $name }}  to Jollibee!</h2>
         <p class="mt-4">This is where your content goes.</p>
     </main>
 
@@ -77,5 +62,4 @@
         &copy; 2024 My Website. All rights reserved.
         </div>
     </footer>
-</body>
-</html>
+@endsection
