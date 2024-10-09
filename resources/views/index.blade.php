@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JoliBini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     @vite('resources/css/app.css')
+    <style type="text/tailwindcss">
+        .btn {
+            @apply bg-red-500 rounded-md p-2 text-white w-full hover:bg-yellow-600;
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
     <!-- Header -->
@@ -54,7 +60,7 @@
                 <h1 class="text-3xl font-bold text-center">1 pcs chicken</h1>
                 <p class=" text-center">Chicken with gravy.</p>
                 <div class="w-full">
-                    <button class="bg-red-500 rounded-md p-2 text-white w-full">Order</button>
+                    <button class="btn">Order</button>
                 </div>
             </div>
             <div class="card p-4 rounded-md border shadow-lg flex flex-col gap-2 justify-center items-center">
@@ -62,7 +68,15 @@
                 <h1 class="text-3xl font-bold text-center">Yumberger</h1>
                 <p class=" text-center">Langhap sarap.</p>
                 <div class="w-full">
-                    <button class="bg-red-500 rounded-md p-2 text-white w-full">Order</button>
+                    <button class="btn">Order</button>
+                </div>
+            </div>
+            <div class="card p-4 rounded-md border shadow-lg flex flex-col gap-2 justify-center items-center">
+                <img src="{{ asset('images/fries.png') }}" alt="">
+                <h1 class="text-3xl font-bold text-center">Fries</h1>
+                <p class=" text-center">French fries.</p>
+                <div class="w-full">
+                    <button class="btn">Order</button>
                 </div>
             </div>
         </div>
